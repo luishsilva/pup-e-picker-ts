@@ -1,1 +1,144 @@
-{"dogs":[{"name":"Nannie","image":"/assets/corgi.png","description":"inquisitively oof calm acupuncture whereas equatorial gosh effectuate","isFavorite":true,"id":0},{"name":"Brycen","image":"/assets/chihuahua.avif","description":"bottleful after baste obliterate putrid","isFavorite":false,"id":1},{"name":"Thurman","image":"/assets/boxer.png","description":"subtle though jade indeed before island aha","isFavorite":true,"id":2},{"name":"Orrin","image":"/assets/chihuahua.avif","description":"provided after despite till watcher","isFavorite":true,"id":3},{"name":"Lucie","image":"/assets/dalmation.png","description":"psst justly browsing all solid","isFavorite":false,"id":4},{"name":"Luella","image":"/assets/blue-heeler.png","description":"smoothly idolized naturally yum that till phew","isFavorite":false,"id":5},{"name":"Shannon","image":"/assets/cowardly.png","description":"invite insistent brr truthfully athwart bah straddle assassination","isFavorite":true,"id":6},{"name":"Imani","image":"/assets/dalmation.png","description":"rattle excluding skean on recovery","isFavorite":true,"id":7},{"name":"Danyka","image":"/assets/chihuahua.avif","description":"chillax daily sally however lest","isFavorite":true,"id":8},{"name":"Toby","image":"/assets/blue-heeler.png","description":"wildly forenenst rightfully till how","isFavorite":false,"id":9},{"name":"Tyson","image":"/assets/blue-heeler.png","description":"inequality maroon however nimble segregate","isFavorite":false,"id":10},{"name":"Eulalia","image":"/assets/boxer.png","description":"foolish rarely despite fooey frantically definitive jubilant dislike","isFavorite":true,"id":11},{"name":"Lawson","image":"/assets/cowardly.png","description":"uniform but wet cruelly knowledgeable","isFavorite":true,"id":12},{"name":"Cooper","image":"/assets/dalmation.png","description":"furthermore when righteously when handlebar breathe considering so","isFavorite":false,"id":13},{"name":"Melody","image":"/assets/chihuahua.avif","description":"demotivate above hmph exploit hatbox quaver these","isFavorite":false,"id":14},{"name":"Linda","image":"/assets/blue-heeler.png","description":"instead angelic kissingly easily apropos tempting crease","isFavorite":true,"id":15},{"name":"Dakota","image":"/assets/chihuahua.avif","description":"salad hopelessly loyally gah whoever","isFavorite":true,"id":16},{"name":"Stewart","image":"/assets/blue-heeler.png","description":"bad whoever obedient modulo investigation daily yum","isFavorite":true,"id":17},{"name":"Melyssa","image":"/assets/cowardly.png","description":"drat considering youthfully unfortunately whereas aside underline jealously","isFavorite":false,"id":18},{"name":"Korey","image":"/assets/chihuahua.avif","description":"loosely at bossy surprisingly friendly for well-lit seldom","isFavorite":false,"id":19}]}
+{
+    "dogs": [
+        {
+            "name": "Hans",
+            "image": "/assets/dalmation.png",
+            "description": "unlike finally oddly er adventurously along despite",
+            "isFavorite": true,
+            "id": 0
+        },
+        {
+            "name": "August",
+            "image": "/assets/cowardly.png",
+            "description": "although nearly lazy incubate sundial",
+            "isFavorite": true,
+            "id": 1
+        },
+        {
+            "name": "Henderson",
+            "image": "/assets/chihuahua.avif",
+            "description": "cauterize connote psst access wherever",
+            "isFavorite": false,
+            "id": 2
+        },
+        {
+            "name": "Ephraim",
+            "image": "/assets/cowardly.png",
+            "description": "puggle backpack sentence retailer carboxyl log boo above",
+            "isFavorite": false,
+            "id": 3
+        },
+        {
+            "name": "Lionel",
+            "image": "/assets/boxer.png",
+            "description": "idealistic drat why assist grab as overawe meanwhile",
+            "isFavorite": true,
+            "id": 4
+        },
+        {
+            "name": "Carley",
+            "image": "/assets/chihuahua.avif",
+            "description": "amusing oof since pheromone notwithstanding and parable",
+            "isFavorite": true,
+            "id": 5
+        },
+        {
+            "name": "Glen",
+            "image": "/assets/chihuahua.avif",
+            "description": "lively jut donkey quintessential broadly loosely properly diplomacy",
+            "isFavorite": true,
+            "id": 6
+        },
+        {
+            "name": "Conor",
+            "image": "/assets/dalmation.png",
+            "description": "evocation repeatedly dear following how or boohoo",
+            "isFavorite": true,
+            "id": 7
+        },
+        {
+            "name": "Ansley",
+            "image": "/assets/corgi.png",
+            "description": "defiantly gently ack exorcize pelican given pace",
+            "isFavorite": false,
+            "id": 8
+        },
+        {
+            "name": "Jarrell",
+            "image": "/assets/corgi.png",
+            "description": "description nor coke likewise sans moisturize playwright",
+            "isFavorite": true,
+            "id": 9
+        },
+        {
+            "name": "Audrey",
+            "image": "/assets/dalmation.png",
+            "description": "reluctantly overexpose zowie too irritably failing or though",
+            "isFavorite": false,
+            "id": 10
+        },
+        {
+            "name": "Eusebio",
+            "image": "/assets/boxer.png",
+            "description": "pill elliptical justify in astride vice nor destabilise",
+            "isFavorite": false,
+            "id": 11
+        },
+        {
+            "name": "Vernie",
+            "image": "/assets/boxer.png",
+            "description": "oh since punt ferryboat kiosk espy flair",
+            "isFavorite": false,
+            "id": 12
+        },
+        {
+            "name": "Rosalyn",
+            "image": "/assets/boxer.png",
+            "description": "salmon seemingly same because frankly whenever between",
+            "isFavorite": false,
+            "id": 13
+        },
+        {
+            "name": "Enrique",
+            "image": "/assets/cowardly.png",
+            "description": "even kaleidoscopic arctic wrapping dense astrologer indeed",
+            "isFavorite": true,
+            "id": 14
+        },
+        {
+            "name": "Maxwell",
+            "image": "/assets/boxer.png",
+            "description": "before wherever which um carelessly",
+            "isFavorite": false,
+            "id": 15
+        },
+        {
+            "name": "Mavis",
+            "image": "/assets/dalmation.png",
+            "description": "minus ripe cradle triumphantly as nor upside-down where",
+            "isFavorite": false,
+            "id": 16
+        },
+        {
+            "name": "Sonia",
+            "image": "/assets/dalmation.png",
+            "description": "forenenst mallet cover ha even vice victorious",
+            "isFavorite": true,
+            "id": 17
+        },
+        {
+            "name": "Easton",
+            "image": "/assets/cowardly.png",
+            "description": "considering rigidly once sweeten overdue hostess rigidly boo",
+            "isFavorite": true,
+            "id": 18
+        },
+        {
+            "name": "Paula",
+            "image": "/assets/cowardly.png",
+            "description": "clam where exasperate pinstripe generally scrabble gentrify",
+            "isFavorite": true,
+            "id": 19
+        }
+    ]
+}
