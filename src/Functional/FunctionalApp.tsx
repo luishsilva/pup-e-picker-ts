@@ -6,7 +6,7 @@ import { FunctionalSection } from "./FunctionalSection";
 export function FunctionalApp() {
   
   const [activeTab, setActiveTab] = useState<number>(1);
-
+  console.log(activeTab)
   return (
     <div className="App" style={{ backgroundColor: "skyblue" }}>
       <header>
@@ -16,8 +16,8 @@ export function FunctionalApp() {
         activeTab={activeTab} 
         setActiveTab={setActiveTab}
       >
-        <FunctionalDogs />
-        <FunctionalCreateDogForm />
+        {activeTab < 3 && <FunctionalDogs />}
+        {activeTab === 3 && <FunctionalCreateDogForm />}
       </FunctionalSection>
     </div>
   );
