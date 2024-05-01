@@ -1,8 +1,18 @@
+import { Dog } from "./types";
+
 export const baseUrl = "http://localhost:3000";
+export const endPoint = "dogs";
+
 
 export const Requests = {
-  // should return a promise with all dogs in the database
-  getAllDogs: () => {},
+  /**
+   * Retrieves all dogss from the server.
+   * @returns {Promise<Dogs[]>} A promise that resolves to an array of dogs.
+   */
+  getAllDogs: (): Promise<Dog[]> => 
+    fetch(`${baseUrl}/${endPoint}`)
+    .then((response) => response.json()),
+
   // should create a dog in the database from a partial dog object
   // and return a promise with the result
   postDog: () => {},

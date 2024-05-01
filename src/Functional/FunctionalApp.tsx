@@ -1,12 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FunctionalCreateDogForm } from "./FunctionalCreateDogForm";
 import { FunctionalDogs } from "./FunctionalDogs";
 import { FunctionalSection } from "./FunctionalSection";
+import { Requests } from "../api";
+import { Dog } from "../types";
 
 export function FunctionalApp() {
   
-  const [activeTab, setActiveTab] = useState<number>(1);
-  console.log(activeTab)
+  const [activeTab, setActiveTab] = useState<number>(0);
+  const [allDogs, setAllDogs] = useState<Dog[]>([]);
+
+  useEffect(() => {
+    Requests.getAllDogs().then(setAllDogs)
+  }, []);
+
+  console.log(allDogs)
+
   return (
     <div className="App" style={{ backgroundColor: "skyblue" }}>
       <header>
