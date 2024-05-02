@@ -388,3 +388,15 @@ h1 > .five,
 .ten {
   color: palevioletred;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
