@@ -21,6 +21,7 @@ export function FunctionalApp() {
       </header>
       <FunctionalSection 
         activeTab={activeTab} 
+        allDogs={allDogs}
         setActiveTab={setActiveTab}
       >
         {activeTab <= 2 && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}/>}

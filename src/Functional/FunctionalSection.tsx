@@ -1,15 +1,20 @@
 // you can use this type for react children if you so choose
 import React, { ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { Dog } from "../types";
 
 type Props = {
   children: ReactNode,
   activeTab: number,
+  allDogs: Dog[],
   setActiveTab: (tabIndex: number) => void
 }
 
-export const FunctionalSection: React.FC<Props> = ({ children, activeTab, setActiveTab })  => {
+export const FunctionalSection: React.FC<Props> = ({ children, activeTab, allDogs, setActiveTab })  => {
 
+  const favoritedDogs = allDogs.filter(dog => dog.isFavorite).length;
+  const unfavoritedDogs = allDogs.filter(dog => !dog.isFavorite).length;
+  
   return (
     <section id="main-section">
       <div className="container-header">
@@ -25,7 +30,7 @@ export const FunctionalSection: React.FC<Props> = ({ children, activeTab, setAct
               setActiveTab(0);
             }}
           >
-            All Dogs
+            All Dogs ( { allDogs.length } )
           </div>
 
           {/* This should display the favorited count */}
@@ -35,7 +40,7 @@ export const FunctionalSection: React.FC<Props> = ({ children, activeTab, setAct
               setActiveTab(1);
             }}
           >
-            favorited ( 12 )
+            favorited ( { favoritedDogs } )
           </div>
 
           {/* This should display the unfavorited count */}
@@ -45,7 +50,7 @@ export const FunctionalSection: React.FC<Props> = ({ children, activeTab, setAct
               setActiveTab(2);
             }}
           >
-            unfavorited ( 25 )
+            unfavorited ( { unfavoritedDogs } )
           </div>
           <div 
             className={`selector ${activeTab === 3 && 'active'}`} 

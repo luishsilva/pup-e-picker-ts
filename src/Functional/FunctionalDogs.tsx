@@ -2,11 +2,12 @@ import { DogCard } from "../Shared/DogCard";
 import { Dog } from "../types";
 
 export const FunctionalDogs = ({activeTab, allDogs}:{allDogs:Dog[]; activeTab: number}) => {
-  console.log(activeTab)
+
   const filteredDogs = activeTab === 0 
     ? allDogs
     : allDogs.filter((dog) => activeTab == 1 ? dog.isFavorite : !dog.isFavorite);
-  return (
+
+    return (
     <>
       {
         <div className="d-flex justify-content-between flex-wrap">
