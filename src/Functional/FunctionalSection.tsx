@@ -18,6 +18,16 @@ export const FunctionalSection: React.FC<Props> = ({ children, activeTab, setAct
           Change to Class
         </Link>
         <div className="selectors">
+          {/* This should display all dogs */}
+          <div 
+            className={`selector ${activeTab === 0 && 'active'}`} 
+            onClick={() => {
+              setActiveTab(0);
+            }}
+          >
+            All Dogs
+          </div>
+
           {/* This should display the favorited count */}
           <div 
             className={`selector ${activeTab === 1 && 'active'}`} 

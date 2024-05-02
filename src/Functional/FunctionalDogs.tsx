@@ -2,7 +2,10 @@ import { DogCard } from "../Shared/DogCard";
 import { Dog } from "../types";
 
 export const FunctionalDogs = ({activeTab, allDogs}:{allDogs:Dog[]; activeTab: number}) => {
-  const filteredDogs = allDogs.filter((dog) => activeTab == 1 ? dog.isFavorite : !dog.isFavorite);
+  console.log(activeTab)
+  const filteredDogs = activeTab === 0 
+    ? allDogs
+    : allDogs.filter((dog) => activeTab == 1 ? dog.isFavorite : !dog.isFavorite);
   return (
     <>
       {

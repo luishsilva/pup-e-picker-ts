@@ -23,7 +23,7 @@ export function FunctionalApp() {
         activeTab={activeTab} 
         setActiveTab={setActiveTab}
       >
-        {activeTab < 3 && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}/>}
+        {activeTab <= 2 && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}/>}
         {activeTab === 3 && <FunctionalCreateDogForm />}
       </FunctionalSection>
     </div>
