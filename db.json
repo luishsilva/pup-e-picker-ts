@@ -1,31 +1,17 @@
 {
   "dogs": [
     {
-      "name": "Hans",
-      "image": "/assets/dalmation.png",
-      "description": "unlike finally oddly er adventurously along despite",
-      "isFavorite": true,
-      "id": 0
-    },
-    {
-      "name": "August",
-      "image": "/assets/cowardly.png",
-      "description": "although nearly lazy incubate sundial",
-      "isFavorite": true,
-      "id": 1
-    },
-    {
       "name": "Henderson",
       "image": "/assets/chihuahua.avif",
       "description": "cauterize connote psst access wherever",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 2
     },
     {
       "name": "Ephraim",
       "image": "/assets/cowardly.png",
       "description": "puggle backpack sentence retailer carboxyl log boo above",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 3
     },
     {
@@ -46,14 +32,14 @@
       "name": "Glen",
       "image": "/assets/chihuahua.avif",
       "description": "lively jut donkey quintessential broadly loosely properly diplomacy",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 6
     },
     {
       "name": "Conor",
       "image": "/assets/dalmation.png",
       "description": "evocation repeatedly dear following how or boohoo",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 7
     },
     {
@@ -67,7 +53,7 @@
       "name": "Jarrell",
       "image": "/assets/corgi.png",
       "description": "description nor coke likewise sans moisturize playwright",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 9
     },
     {
@@ -99,13 +85,6 @@
       "id": 13
     },
     {
-      "name": "Enrique",
-      "image": "/assets/cowardly.png",
-      "description": "even kaleidoscopic arctic wrapping dense astrologer indeed",
-      "isFavorite": true,
-      "id": 14
-    },
-    {
       "name": "Maxwell",
       "image": "/assets/boxer.png",
       "description": "before wherever which um carelessly",
@@ -123,21 +102,21 @@
       "name": "Sonia",
       "image": "/assets/dalmation.png",
       "description": "forenenst mallet cover ha even vice victorious",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 17
     },
     {
       "name": "Easton",
       "image": "/assets/cowardly.png",
       "description": "considering rigidly once sweeten overdue hostess rigidly boo",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 18
     },
     {
       "name": "Paula",
       "image": "/assets/cowardly.png",
       "description": "clam where exasperate pinstripe generally scrabble gentrify",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 19
     }
   ]

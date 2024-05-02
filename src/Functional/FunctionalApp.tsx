@@ -11,8 +11,33 @@ export function FunctionalApp() {
   const [allDogs, setAllDogs] = useState<Dog[]>([]);
 
   useEffect(() => {
-    Requests.getAllDogs().then(setAllDogs)
+    refetchData();
   }, []);
+
+  const refetchData = () => {
+    return Requests.getAllDogs().then(setAllDogs)
+  }
+
+  const updateDog = (id: number, isFavorite: boolean) => {
+    return new Promise<void>(() => {
+      Requests.updateDog(id, isFavorite)
+        .then(() => {
+          refetchData()
+            .then(() => {
+              console.log('Updated...', isFavorite)
+            });
+        });
+    });
+  }
+
+  const deleteDog = (id: number) => {
+    return new Promise<void>(() => {
+      Requests.deleteDog(id)
+        .then(() => {
+          refetchData();
+        });
+    })
+  }
 
   return (
     <div className="App" style={{ backgroundColor: "skyblue" }}>
@@ -24,7 +49,7 @@ export function FunctionalApp() {
         allDogs={allDogs}
         setActiveTab={setActiveTab}
       >
-        {activeTab <= 2 && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}/>}
+        {activeTab <= 2 && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}  deleteDog={deleteDog} updateDog={updateDog}/>}
         {activeTab === 3 && <FunctionalCreateDogForm />}
       </FunctionalSection>
     </div>

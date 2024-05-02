@@ -1,7 +1,14 @@
 import { DogCard } from "../Shared/DogCard";
 import { Dog } from "../types";
+import { Requests } from "../api";
 
-export const FunctionalDogs = ({activeTab, allDogs}:{allDogs:Dog[]; activeTab: number}) => {
+export const FunctionalDogs = ({activeTab, allDogs, updateDog, deleteDog} : 
+  {
+    allDogs:Dog[]; 
+    activeTab: number; 
+    updateDog: (id: number, isFavorite: boolean) => Promise<void>; 
+    deleteDog: (id: number) => Promise<void>
+  }) => {
 
   const filteredDogs = activeTab === 0 
     ? allDogs
@@ -11,7 +18,7 @@ export const FunctionalDogs = ({activeTab, allDogs}:{allDogs:Dog[]; activeTab: n
     <>
       {
         <div className="d-flex justify-content-between flex-wrap">
-          {filteredDogs.length && filteredDogs.map((dog) => (
+          {filteredDogs.length > 0 && filteredDogs.map((dog) => (
             <DogCard
               dog={{
                 id: dog.id,
@@ -22,13 +29,13 @@ export const FunctionalDogs = ({activeTab, allDogs}:{allDogs:Dog[]; activeTab: n
               }}
               key={dog.id}
               onTrashIconClick={() => {
-                alert("clicked trash");
+                deleteDog(dog.id);
               }}
               onHeartClick={() => {
-                alert("clicked heart");
+                updateDog(dog.id, false);
               }}
               onEmptyHeartClick={() => {
-                alert("clicked empty heart");
+                updateDog(dog.id, true);
               }}
               isLoading={false}
             />
