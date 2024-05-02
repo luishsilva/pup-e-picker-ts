@@ -14,8 +14,6 @@ export function FunctionalApp() {
     Requests.getAllDogs().then(setAllDogs)
   }, []);
 
-  console.log(allDogs)
-
   return (
     <div className="App" style={{ backgroundColor: "skyblue" }}>
       <header>
@@ -25,7 +23,7 @@ export function FunctionalApp() {
         activeTab={activeTab} 
         setActiveTab={setActiveTab}
       >
-        {activeTab < 3 && <FunctionalDogs />}
+        {activeTab < 3 && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}/>}
         {activeTab === 3 && <FunctionalCreateDogForm />}
       </FunctionalSection>
     </div>
