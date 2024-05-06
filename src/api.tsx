@@ -15,21 +15,29 @@ export const Requests = {
     })
     .then((response) => response.json()),
 
-  // should create a dog in the database from a partial dog object
-  // and return a promise with the result
-  postDog: () => {},
+  /**
+   * Creates a new dog.
+   * @param {Omit<Dog, "id">} note The dog object to create.
+   * @returns {Promise<Dog[]>} A promise that resolves to an array of dogs.
+   */
+  postDog: (dog: Omit<Dog, "id">)  => (
+    fetch(`${baseUrl}/${endPoint}`,{
+        body: JSON.stringify(dog),
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        }
+    }).then((response) => response.json())
+  ),
 
   // should delete a dog from the database
   deleteDog: (id: number): Promise<void> => {
     return new Promise((resolve, reject) => {
         fetch(`${baseUrl}/${endPoint}/${id}`, {
             method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            }
         }).then((response) => {
             if (!response.ok) {
-                reject(new Error("Failed to delete note"));
+                reject(new Error("Failed to delete dog"));
             } else {
                 resolve();
             }

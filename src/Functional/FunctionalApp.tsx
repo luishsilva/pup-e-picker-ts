@@ -34,9 +34,24 @@ export function FunctionalApp() {
     return new Promise<void>(() => {
       Requests.deleteDog(id)
         .then(() => {
-          refetchData();
+          refetchData()
+            .then(() => {
+              console.log('Deleted...')
+            });
         });
     })
+  }
+
+  const postDog = (dog: Omit<Dog, "id">) => {
+    Requests.postDog(dog).then(() => {
+      refetchData()
+      .then(() => {
+        console.log("Created....")
+      })
+      .finally(() => {
+        console.log("Finished....")
+      });
+    });
   }
 
   return (
@@ -49,8 +64,8 @@ export function FunctionalApp() {
         allDogs={allDogs}
         setActiveTab={setActiveTab}
       >
-        {activeTab <= 2 && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}  deleteDog={deleteDog} updateDog={updateDog}/>}
-        {activeTab === 3 && <FunctionalCreateDogForm />}
+        {activeTab <= 2 && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}  deleteDog={deleteDog} updateDog={updateDog} postDog={postDog}/>}
+        {activeTab === 3 && <FunctionalCreateDogForm postDog={postDog} />}
       </FunctionalSection>
     </div>
   );

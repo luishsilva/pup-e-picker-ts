@@ -90,17 +90,17 @@ You should use conditional rendering to show different components inside of the 
 ### when no tab is active
 
 - [ X ] show the `(Functional | Class)Dogs` component
-- [ ] the dogs we can see should be ALL OF THE DOGS FETCHED
+- [ X ] the dogs we can see should be ALL OF THE DOGS FETCHED
 
 ### when the `favorited` tab is active
 
 - [ X ] shows the `(Functional | Class)Dogs` component
-- [ ] the dogs we can see should be ONLY THE DOGS WHERE `isFavorite` IS TRUE
+- [ X ] the dogs we can see should be ONLY THE DOGS WHERE `isFavorite` IS TRUE
 
 ### when the `unfavorited` tab is active
 
-- [ ] should show the `Dogs` component
-- [ ] the selected dogs should be ONLY THE DOGS WHERE `isFavorite` IS FALSE
+- [ X ] should show the `Dogs` component
+- [ X ] the selected dogs should be ONLY THE DOGS WHERE `isFavorite` IS FALSE
 
 ### when the create dog tab is active
 

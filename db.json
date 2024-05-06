@@ -1,20 +1,6 @@
 {
   "dogs": [
     {
-      "name": "Henderson",
-      "image": "/assets/chihuahua.avif",
-      "description": "cauterize connote psst access wherever",
-      "isFavorite": true,
-      "id": 2
-    },
-    {
-      "name": "Ephraim",
-      "image": "/assets/cowardly.png",
-      "description": "puggle backpack sentence retailer carboxyl log boo above",
-      "isFavorite": true,
-      "id": 3
-    },
-    {
       "name": "Lionel",
       "image": "/assets/boxer.png",
       "description": "idealistic drat why assist grab as overawe meanwhile",
@@ -118,6 +104,20 @@
       "description": "clam where exasperate pinstripe generally scrabble gentrify",
       "isFavorite": false,
       "id": 19
+    },
+    {
+      "name": "Dog",
+      "image": "/assets/boxer.jpeg",
+      "description": "dog test",
+      "isFavorite": false,
+      "id": 20
+    },
+    {
+      "name": "Dog 1",
+      "image": "/assets/blue-heeler.png",
+      "description": "This is the dog number one",
+      "isFavorite": false,
+      "id": 21
     }
   ]
 }
