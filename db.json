@@ -118,6 +118,20 @@
       "description": "This is the dog number one",
       "isFavorite": false,
       "id": 21
+    },
+    {
+      "name": "Toast dog",
+      "image": "/assets/boxer.jpeg",
+      "description": "description toast dog",
+      "isFavorite": false,
+      "id": 22
+    },
+    {
+      "name": "New dog",
+      "image": "/assets/corgi.png",
+      "description": "New dog description",
+      "isFavorite": false,
+      "id": 23
     }
   ]
 }

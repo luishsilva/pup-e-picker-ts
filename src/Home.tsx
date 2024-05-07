@@ -23,7 +23,7 @@ export const Home = () => {
           color: "black",
           textAlign: "center",
           padding: 10,
-          fontSize: 20,
+          fontSize: 20
         }}
       >
         <p>

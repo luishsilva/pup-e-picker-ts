@@ -3,65 +3,62 @@ import { Dog } from "./types";
 export const baseUrl = "http://localhost:3000";
 export const endPoint = "dogs";
 
-
 export const Requests = {
   /**
    * Retrieves all dogss from the server.
    * @returns {Promise<Dogs[]>} A promise that resolves to an array of dogs.
    */
-  getAllDogs: (): Promise<Dog[]> => 
+  getAllDogs: (): Promise<Dog[]> =>
     fetch(`${baseUrl}/${endPoint}`, {
-      method: 'GET',
-    })
-    .then((response) => response.json()),
+      method: "GET"
+    }).then((response) => response.json()),
 
   /**
    * Creates a new dog.
    * @param {Omit<Dog, "id">} note The dog object to create.
    * @returns {Promise<Dog[]>} A promise that resolves to an array of dogs.
    */
-  postDog: (dog: Omit<Dog, "id">)  => (
-    fetch(`${baseUrl}/${endPoint}`,{
-        body: JSON.stringify(dog),
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        }
-    }).then((response) => response.json())
-  ),
+  postDog: (dog: Omit<Dog, "id">) =>
+    fetch(`${baseUrl}/${endPoint}`, {
+      body: JSON.stringify(dog),
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then((response) => response.json()),
 
   // should delete a dog from the database
   deleteDog: (id: number): Promise<void> => {
     return new Promise((resolve, reject) => {
-        fetch(`${baseUrl}/${endPoint}/${id}`, {
-            method: "DELETE",
-        }).then((response) => {
-            if (!response.ok) {
-                reject(new Error("Failed to delete dog"));
-            } else {
-                resolve();
-            }
-        }).catch((error) => {
-            reject(error);
+      fetch(`${baseUrl}/${endPoint}/${id}`, {
+        method: "DELETE"
+      })
+        .then((response) => {
+          if (!response.ok) {
+            reject(new Error("Failed to delete dog"));
+          } else {
+            resolve();
+          }
+        })
+        .catch((error) => {
+          reject(error);
         });
     });
   },
 
-
-  updateDog: (id: number, isFavorite: boolean): Promise<Dog[]> => 
+  updateDog: (id: number, isFavorite: boolean): Promise<Dog[]> =>
     fetch(`${baseUrl}/${endPoint}/${id}`, {
-      method: 'PATCH',
+      method: "PATCH",
       body: JSON.stringify({
-        isFavorite: isFavorite,
+        isFavorite: isFavorite
       }),
       headers: {
         "Content-Type": "application/json"
       }
-    })
-    .then((response) => response.json()),
+    }).then((response) => response.json()),
 
   // Just a dummy function for use in the playground
   dummyFunction: () => {
     console.log("dummy stuff");
-  },
+  }
 };

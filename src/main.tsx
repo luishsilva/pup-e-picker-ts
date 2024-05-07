@@ -13,25 +13,25 @@ import { Playground } from "./Playground.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Home />
   },
   {
     path: "/functional",
-    element: <FunctionalApp />,
+    element: <FunctionalApp />
   },
   {
     path: "/class",
-    element: <ClassApp />,
+    element: <ClassApp />
   },
   {
     path: "/playground",
-    element: <Playground />,
-  },
+    element: <Playground />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Toaster />
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 );
