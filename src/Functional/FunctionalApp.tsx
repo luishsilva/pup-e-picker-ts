@@ -16,9 +16,7 @@ export function FunctionalApp() {
     refetchData();
   }, []);
 
-  const refetchData = () => {
-    return Requests.getAllDogs().then(setAllDogs)
-  }
+  const refetchData = () => Requests.getAllDogs().then(setAllDogs);
 
   const updateDog = (id: number, isFavorite: boolean) => {
     setIsloading(true);
