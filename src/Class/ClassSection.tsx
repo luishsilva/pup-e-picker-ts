@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 type ClassSectionProps = {
   activeTab: number,
+  allDogs: [],
   children: ReactNode,
   setActiveTab: (tabIndex: number) => void
 }
@@ -11,7 +12,7 @@ type ClassSectionProps = {
 export class ClassSection extends Component<ClassSectionProps> {
   render() {
 
-    const { activeTab, setActiveTab } = this.props;
+    const { activeTab, allDogs, setActiveTab } = this.props;
 
     return (
       <section id="main-section">
@@ -25,7 +26,7 @@ export class ClassSection extends Component<ClassSectionProps> {
           <div className="selectors">
             {/* This should display the all Dogs */}
             <div className={`selector ${activeTab === 0 && 'active'}`} onClick={() => setActiveTab(0)} >
-              All Dogs ( 0 )
+              All Dogs ( {allDogs.length} )
             </div>
 
             {/* This should display the favorited count */}
