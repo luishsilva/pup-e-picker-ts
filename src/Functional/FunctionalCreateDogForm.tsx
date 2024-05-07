@@ -17,12 +17,12 @@ export const FunctionalCreateDogForm = ({postDog} : {postDog: (dog: Omit<Dog, "i
       id="create-dog-form"
       onSubmit={(e) => {
         e.preventDefault();
-        postDog({
+        /* postDog({
           name: name,
           image: image,
           description: description,
           isFavorite: false
-        });
+        }); */
         setName("");
         setDescription("");
         setImage(defaultSelectedImage);
@@ -33,18 +33,20 @@ export const FunctionalCreateDogForm = ({postDog} : {postDog: (dog: Omit<Dog, "i
       <label htmlFor="name">Dog Name</label>
       <input 
         className="form-input"
-        type="text" 
         disabled={false} 
         onChange={(event) => setName(event.target.value)}
+        type="text"
+        value={name}
       />
       <label htmlFor="description">Dog Description</label>
       <textarea 
-        name="" 
         className="form-input"
-        cols={80} 
-        rows={10} 
+        cols={80}
         disabled={false}
         onChange={(event) => setDescription(event.target.value)}
+        name=""
+        rows={10}
+        value={description}
       >
       </textarea>
       <label htmlFor="picture">Select an Image</label>
@@ -55,6 +57,7 @@ export const FunctionalCreateDogForm = ({postDog} : {postDog: (dog: Omit<Dog, "i
             onChange={(event) => {
               setImage(event.target.value)
             }}
+            value={image}
           >
             {Object.entries(dogPictures).map(([label, pictureValue]) => {
               return (
@@ -66,10 +69,10 @@ export const FunctionalCreateDogForm = ({postDog} : {postDog: (dog: Omit<Dog, "i
           </select>
         </div>
         <img 
-          id="form-image-display"
+          alt={`Image of ${image}`}
           className=""
-          src={image} 
-          alt={`Image of ${image}`} 
+          id="form-image-display"
+          src={image}
         />
       </div>
       <input type="submit" />
