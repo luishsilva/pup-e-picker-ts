@@ -21,18 +21,21 @@ export function FunctionalApp() {
   }
 
   const updateDog = (id: number, isFavorite: boolean) => {
+    setIsloading(true);
     return new Promise<void>(() => {
       Requests.updateDog(id, isFavorite)
-        .then(() => {
-          refetchData()
-            .then(() => {
-              console.log('Updated...', isFavorite)
-            });
+        .then(() => refetchData())
+        .finally(() => setIsloading(false))
+        .catch(() => {
+          toast.error('Faild to update the Dog, Please try again.', {
+            duration: 2000,
+          });
         });
     });
   }
 
   const deleteDog = (id: number) => {
+    setIsloading(true);
     return new Promise<void>(() => {
       Requests.deleteDog(id)
         .then(() => {
@@ -42,11 +45,18 @@ export function FunctionalApp() {
                 duration: 2000,
               });
             });
+        })
+        .finally(() => setIsloading(false))
+        .catch(() => {
+          toast.error('Faild to delete the Dog, Please try again.', {
+            duration: 2000,
+          });
         });
     })
   }
 
   const postDog = (dog: Omit<Dog, "id">) => {
+    setIsloading(true);
     Requests.postDog(dog).then(() => {
       refetchData()
       .then(() => {
@@ -54,8 +64,11 @@ export function FunctionalApp() {
           duration: 2000,
         });
       })
-      .finally(() => {
-        console.log("Finished....")
+      .finally(() => setIsloading(false))
+      .catch(() => {
+        toast.error('Faild to add a new Dog, Please try again.', {
+          duration: 2000,
+        });
       });
     });
   }
@@ -70,8 +83,8 @@ export function FunctionalApp() {
         allDogs={allDogs}
         setActiveTab={setActiveTab}
       >
-        {activeTab <= 2 && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}  deleteDog={deleteDog} updateDog={updateDog} postDog={postDog}/>}
-        {activeTab === 3 && <FunctionalCreateDogForm postDog={postDog} />}
+        {activeTab <= 2 && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}  deleteDog={deleteDog} isLoading={isLoading} updateDog={updateDog} />}
+        {activeTab === 3 && <FunctionalCreateDogForm postDog={postDog} isLoading={isLoading} />}
       </FunctionalSection>
     </div>
   );

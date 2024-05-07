@@ -5,7 +5,7 @@ import { Dog } from "../types";
 //default selected image
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
-export const FunctionalCreateDogForm = ({postDog} : {postDog: (dog: Omit<Dog, "id">) => void}) => {
+export const FunctionalCreateDogForm = ({postDog, isLoading} : {postDog: (dog: Omit<Dog, "id">) => void, isLoading: boolean}) => {
 
   const [name, setName] = useState("");
   const [image, setImage] = useState(defaultSelectedImage);
@@ -17,12 +17,12 @@ export const FunctionalCreateDogForm = ({postDog} : {postDog: (dog: Omit<Dog, "i
       id="create-dog-form"
       onSubmit={(e) => {
         e.preventDefault();
-        /* postDog({
+        postDog({
           name: name,
           image: image,
           description: description,
           isFavorite: false
-        }); */
+        });
         setName("");
         setDescription("");
         setImage(defaultSelectedImage);
@@ -75,7 +75,7 @@ export const FunctionalCreateDogForm = ({postDog} : {postDog: (dog: Omit<Dog, "i
           src={image}
         />
       </div>
-      <input type="submit" />
+      <input type="submit" disabled={isLoading}/>
     </form>
   );
 };

@@ -4,35 +4,21 @@
       "name": "Lionel",
       "image": "/assets/boxer.png",
       "description": "idealistic drat why assist grab as overawe meanwhile",
-      "isFavorite": true,
-      "id": 4
-    },
-    {
-      "name": "Carley",
-      "image": "/assets/chihuahua.avif",
-      "description": "amusing oof since pheromone notwithstanding and parable",
-      "isFavorite": true,
-      "id": 5
-    },
-    {
-      "name": "Glen",
-      "image": "/assets/chihuahua.avif",
-      "description": "lively jut donkey quintessential broadly loosely properly diplomacy",
       "isFavorite": false,
-      "id": 6
+      "id": 4
     },
     {
       "name": "Conor",
       "image": "/assets/dalmation.png",
       "description": "evocation repeatedly dear following how or boohoo",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 7
     },
     {
       "name": "Ansley",
       "image": "/assets/corgi.png",
       "description": "defiantly gently ack exorcize pelican given pace",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 8
     },
     {
@@ -60,7 +46,7 @@
       "name": "Vernie",
       "image": "/assets/boxer.png",
       "description": "oh since punt ferryboat kiosk espy flair",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 12
     },
     {
@@ -95,43 +81,8 @@
       "name": "Easton",
       "image": "/assets/cowardly.png",
       "description": "considering rigidly once sweeten overdue hostess rigidly boo",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 18
-    },
-    {
-      "name": "Paula",
-      "image": "/assets/cowardly.png",
-      "description": "clam where exasperate pinstripe generally scrabble gentrify",
-      "isFavorite": false,
-      "id": 19
-    },
-    {
-      "name": "Dog",
-      "image": "/assets/boxer.jpeg",
-      "description": "dog test",
-      "isFavorite": false,
-      "id": 20
-    },
-    {
-      "name": "Dog 1",
-      "image": "/assets/blue-heeler.png",
-      "description": "This is the dog number one",
-      "isFavorite": false,
-      "id": 21
-    },
-    {
-      "name": "Toast dog",
-      "image": "/assets/boxer.jpeg",
-      "description": "description toast dog",
-      "isFavorite": false,
-      "id": 22
-    },
-    {
-      "name": "New dog",
-      "image": "/assets/corgi.png",
-      "description": "New dog description",
-      "isFavorite": false,
-      "id": 23
     }
   ]
 }

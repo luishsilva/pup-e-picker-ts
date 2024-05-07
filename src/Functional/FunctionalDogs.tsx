@@ -1,13 +1,13 @@
 import { DogCard } from "../Shared/DogCard";
 import { Dog } from "../types";
-import { Requests } from "../api";
 
-export const FunctionalDogs = ({activeTab, allDogs, updateDog, deleteDog} : 
+export const FunctionalDogs = ({activeTab, allDogs, updateDog, deleteDog, isLoading} : 
   {
     allDogs:Dog[]; 
     activeTab: number; 
     updateDog: (id: number, isFavorite: boolean) => Promise<void>; 
-    deleteDog: (id: number) => Promise<void>
+    deleteDog: (id: number) => Promise<void>,
+    isLoading: boolean
   }) => {
 
   const filteredDogs = activeTab === 0 
@@ -37,7 +37,7 @@ export const FunctionalDogs = ({activeTab, allDogs, updateDog, deleteDog} :
               onEmptyHeartClick={() => {
                 updateDog(dog.id, true);
               }}
-              isLoading={false}
+              isLoading={isLoading}
             />
           ))}
         </div>
