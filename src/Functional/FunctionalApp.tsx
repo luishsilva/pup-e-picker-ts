@@ -4,11 +4,13 @@ import { FunctionalDogs } from "./FunctionalDogs";
 import { FunctionalSection } from "./FunctionalSection";
 import { Requests } from "../api";
 import { Dog } from "../types";
+import { toast } from 'react-hot-toast';
 
 export function FunctionalApp() {
   
   const [activeTab, setActiveTab] = useState<number>(0);
   const [allDogs, setAllDogs] = useState<Dog[]>([]);
+  const [isLoading, setIsloading] = useState(false);
 
   useEffect(() => {
     refetchData();
@@ -36,7 +38,9 @@ export function FunctionalApp() {
         .then(() => {
           refetchData()
             .then(() => {
-              console.log('Deleted...')
+              toast.success('Dog deleted succesfully.', {
+                duration: 2000,
+              });
             });
         });
     })
@@ -46,7 +50,9 @@ export function FunctionalApp() {
     Requests.postDog(dog).then(() => {
       refetchData()
       .then(() => {
-        console.log("Created....")
+        toast.success('Dog created succesfully.', {
+          duration: 2000,
+        });
       })
       .finally(() => {
         console.log("Finished....")
