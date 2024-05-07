@@ -2,8 +2,13 @@
 import { Component, ReactNode } from "react";
 import { Link } from "react-router-dom";
 
-export class ClassSection extends Component {
+type ClassSectionProps = {
+  children: ReactNode
+}
+
+export class ClassSection extends Component<ClassSectionProps> {
   render() {
+  
     return (
       <section id="main-section">
         <div className="container-header">
@@ -28,7 +33,9 @@ export class ClassSection extends Component {
             </div>
           </div>
         </div>
-        <div className="content-container"></div>
+        <div className="content-container">
+          { this.props.children }
+        </div>
       </section>
     );
   }
