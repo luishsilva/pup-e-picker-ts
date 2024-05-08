@@ -1,80 +1,24 @@
 {
   "dogs": [
     {
-      "name": "Lionel",
-      "image": "/assets/boxer.png",
-      "description": "idealistic drat why assist grab as overawe meanwhile",
-      "isFavorite": false,
-      "id": 4
-    },
-    {
-      "name": "Conor",
-      "image": "/assets/dalmation.png",
-      "description": "evocation repeatedly dear following how or boohoo",
-      "isFavorite": true,
-      "id": 7
-    },
-    {
-      "name": "Ansley",
-      "image": "/assets/corgi.png",
-      "description": "defiantly gently ack exorcize pelican given pace",
-      "isFavorite": true,
-      "id": 8
-    },
-    {
-      "name": "Jarrell",
-      "image": "/assets/corgi.png",
-      "description": "description nor coke likewise sans moisturize playwright",
-      "isFavorite": false,
-      "id": 9
-    },
-    {
-      "name": "Audrey",
-      "image": "/assets/dalmation.png",
-      "description": "reluctantly overexpose zowie too irritably failing or though",
-      "isFavorite": false,
-      "id": 10
-    },
-    {
-      "name": "Eusebio",
-      "image": "/assets/boxer.png",
-      "description": "pill elliptical justify in astride vice nor destabilise",
-      "isFavorite": false,
-      "id": 11
-    },
-    {
-      "name": "Vernie",
-      "image": "/assets/boxer.png",
-      "description": "oh since punt ferryboat kiosk espy flair",
-      "isFavorite": true,
-      "id": 12
-    },
-    {
-      "name": "Rosalyn",
-      "image": "/assets/boxer.png",
-      "description": "salmon seemingly same because frankly whenever between",
-      "isFavorite": false,
-      "id": 13
-    },
-    {
       "name": "Maxwell",
       "image": "/assets/boxer.png",
       "description": "before wherever which um carelessly",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 15
     },
     {
       "name": "Mavis",
       "image": "/assets/dalmation.png",
       "description": "minus ripe cradle triumphantly as nor upside-down where",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 16
     },
     {
       "name": "Sonia",
       "image": "/assets/dalmation.png",
       "description": "forenenst mallet cover ha even vice victorious",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 17
     },
     {

@@ -29,6 +29,7 @@ export const Requests = {
 
   // should delete a dog from the database
   deleteDog: (id: number): Promise<void> => {
+
     return new Promise((resolve, reject) => {
       fetch(`${baseUrl}/${endPoint}/${id}`, {
         method: "DELETE"
@@ -61,4 +62,5 @@ export const Requests = {
   dummyFunction: () => {
     console.log("dummy stuff");
   }
+
 };

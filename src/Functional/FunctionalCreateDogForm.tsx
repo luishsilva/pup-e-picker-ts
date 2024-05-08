@@ -41,7 +41,7 @@ export const FunctionalCreateDogForm = ({postDog, isLoading} : {postDog: (dog: O
       <label htmlFor="description">Dog Description</label>
       <textarea 
         className="form-input"
-        cols={80}
+        cols={30}
         disabled={false}
         onChange={(event) => setDescription(event.target.value)}
         name=""

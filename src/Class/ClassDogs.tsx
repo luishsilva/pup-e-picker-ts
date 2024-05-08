@@ -4,18 +4,19 @@ import { Dog } from "../types";
 
 type ClassDogsProps = {
   allDogs: Dog[],
-  activeTab: number
+  activeTab: number,
+  updateDog: (id: number, isFavorite: boolean) => Promise<void>,
+  deleteDog: (id: number) => Promise<void>,
 }
 
 export class ClassDogs extends Component<ClassDogsProps> {
   render() {
 
-    const { allDogs, activeTab } = this.props
+    const { allDogs, activeTab, deleteDog, updateDog } = this.props
 
     const filteredDogs = activeTab === 0 
     ? allDogs
     : allDogs.filter((dog) => activeTab == 1 ? dog.isFavorite : !dog.isFavorite);
-
 
     return (
       <>
@@ -30,13 +31,13 @@ export class ClassDogs extends Component<ClassDogsProps> {
             }}
             key={dog.id}
             onTrashIconClick={() => {
-              alert("clicked trash");
+              deleteDog(dog.id);
             }}
             onHeartClick={() => {
-              alert("clicked heart");
+              updateDog(dog.id, false);
             }}
             onEmptyHeartClick={() => {
-              alert("clicked empty heart");
+              updateDog(dog.id, true);
             }}
             isLoading={false}
           />
