@@ -3,17 +3,23 @@ import { Component } from "react";
 import { Dog } from "../types";
 
 type ClassDogsProps = {
-  allDogs: Dog[]
+  allDogs: Dog[],
+  activeTab: number
 }
 
 export class ClassDogs extends Component<ClassDogsProps> {
   render() {
 
-    const { allDogs } = this.props
+    const { allDogs, activeTab } = this.props
+
+    const filteredDogs = activeTab === 0 
+    ? allDogs
+    : allDogs.filter((dog) => activeTab == 1 ? dog.isFavorite : !dog.isFavorite);
+
 
     return (
       <>
-        { allDogs.length && allDogs.map((dog) => (
+        { filteredDogs.length && filteredDogs.map((dog) => (
           <DogCard
             dog={{
               description: dog.description,

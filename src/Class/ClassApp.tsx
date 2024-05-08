@@ -41,7 +41,7 @@ export class ClassApp extends Component<State> {
           allDogs={allDogs}
           setActiveTab={this.setActiveTab}
         >
-          {activeTab <= 2 && <ClassDogs allDogs={allDogs} />}
+          {activeTab <= 2 && <ClassDogs activeTab={activeTab} allDogs={allDogs} />}
           {activeTab === 3 && <ClassCreateDogForm />}
         </ClassSection>
       </div>
