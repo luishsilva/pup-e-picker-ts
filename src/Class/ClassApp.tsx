@@ -31,11 +31,13 @@ export class ClassApp extends Component<State> {
  setActiveTab = (tabIndex: number) => this.setState({activeTab: tabIndex})
 
  updateDog = (id: number, isFavorite: boolean) => {
-  // should set is log to true
+  this.setState({ isLoading: true });
   return new Promise<void>(() => {
     Requests.updateDog(id, isFavorite)
-      .then(() => this.refetchData())
-      //.finally(() => console.log('sould set is log to false'))
+      .then(() => {
+        this.setState({ isLoading: false });
+        this.refetchData()
+      })
       .catch(() => {
         toast.error('Faild to update the Dog, Please try again.', {
           duration: 2000,
@@ -65,6 +67,24 @@ export class ClassApp extends Component<State> {
     })
   }
 
+  postDog = (dog: Omit<Dog, "id">) => {
+    this.setState({ isLoading: true });
+    Requests.postDog(dog).then(() => {
+      this.refetchData()
+      .then(() => {
+        toast.success('Dog created succesfully.', {
+          duration: 2000,
+        });
+      })
+      .finally(() => this.setState({ isLoading: false }))
+      .catch(() => {
+        toast.error('Faild to add a new Dog, Please try again.', {
+          duration: 2000,
+        });
+      });
+    });
+  }
+
   render() {
 
     const { activeTab, allDogs, isLoading } = this.state
@@ -80,7 +100,7 @@ export class ClassApp extends Component<State> {
           setActiveTab={this.setActiveTab}
         >
           {activeTab <= 2 && <ClassDogs activeTab={activeTab} allDogs={allDogs} deleteDog={this.deleteDog} updateDog={this.updateDog} />}
-          {activeTab === 3 && <ClassCreateDogForm />}
+          {activeTab === 3 && <ClassCreateDogForm postDog={this.postDog} isLoading={isLoading}/>}
         </ClassSection>
       </div>
     );

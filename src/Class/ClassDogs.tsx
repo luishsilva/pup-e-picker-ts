@@ -19,8 +19,8 @@ export class ClassDogs extends Component<ClassDogsProps> {
     : allDogs.filter((dog) => activeTab == 1 ? dog.isFavorite : !dog.isFavorite);
 
     return (
-      <>
-        { filteredDogs.length && filteredDogs.map((dog) => (
+      <div className="d-flex justify-content-between flex-wrap">
+        { filteredDogs.length > 0 && filteredDogs.map((dog) => (
           <DogCard
             dog={{
               description: dog.description,
@@ -42,7 +42,7 @@ export class ClassDogs extends Component<ClassDogsProps> {
             isLoading={false}
           />
         ))}
-      </>
+      </div>
     );
   }
 }
