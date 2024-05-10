@@ -26,7 +26,6 @@ export const FunctionalCreateDogForm = ({postDog, isLoading} : {postDog: (dog: O
         setName("");
         setDescription("");
         setImage(defaultSelectedImage);
-        
       }}
     >
       <h4>Create a New Dog</h4>
