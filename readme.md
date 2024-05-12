@@ -54,14 +54,14 @@ To get this project setup, you should:
 
 ## Typescript Specific Requirements
 
-- [ ] pass **ALL** type checks
+- [ X ] pass **ALL** type checks
   - Check by running `npm run typecheck`
-- [ ] DON'T USE `any`.... OR ELSE
-- [ ] Keep your types clean and in a logical location
-- [ ] Prop Types for components should be collocated with their components
-- [ ] Shared types should live in a file that says `types` somewhere in it's name
-  - [ ] example: `types.ts` should work fine
-- [ ] Unshared types should live in the component they are used in
+- [ X ] DON'T USE `any`.... OR ELSE
+- [ X ] Keep your types clean and in a logical location
+- [ X ] Prop Types for components should be collocated with their components
+- [ X ] Shared types should live in a file that says `types` somewhere in it's name
+- [ X ] example: `types.ts` should work fine
+- [ X ] Unshared types should live in the component they are used in
 
 ## Example Of Correct Code
 
@@ -80,8 +80,8 @@ Note: It's not a perfect mapping to what you're going to build, below highlights
 
 - [ X ] place `FunctionalDogs` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
 - [ X ] place `FunctionalCreateDogForm` inside of the `.content-container` div of the `FunctionalSection` component **using React Children**
-- [ ] place `ClassDogs` inside of the `.content-container` div of the `ClassSection` component **using React Children**
-- [ ] place `ClassCreateDogForm` inside of the `.content-container` div of the `ClassSection` component **using React Children**
+- [ X ] place `ClassDogs` inside of the `.content-container` div of the `ClassSection` component **using React Children**
+- [ X ] place `ClassCreateDogForm` inside of the `.content-container` div of the `ClassSection` component **using React Children**
 
 ## Navigation
 
@@ -152,8 +152,8 @@ You should use conditional rendering to show different components inside of the 
 
 If the data is still loading then...
 
-- [ ] All inputs should be disabled
-- [ ] Buttons should be disabled
+- [ X ] All inputs should be disabled
+- [ X ] Buttons should be disabled
 
 ## What happens when you submit the form
 

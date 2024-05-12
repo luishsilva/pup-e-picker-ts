@@ -12,7 +12,7 @@ type State = {
   isLoading: boolean,
 }
 
-export class ClassApp extends Component<State> {
+export class ClassApp extends Component {
 
   state: State = {
     activeTab: 0,

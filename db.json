@@ -15,39 +15,32 @@
       "id": 16
     },
     {
-      "name": "Sonia",
-      "image": "/assets/dalmation.png",
-      "description": "forenenst mallet cover ha even vice victorious",
-      "isFavorite": true,
-      "id": 17
-    },
-    {
-      "name": "Easton",
-      "image": "/assets/cowardly.png",
-      "description": "considering rigidly once sweeten overdue hostess rigidly boo",
-      "isFavorite": false,
-      "id": 18
-    },
-    {
       "name": "Dog 1",
       "image": "/assets/boxer.jpeg",
       "description": "DOG DESCRIPTION 1",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 19
     },
     {
       "name": "Dog 2",
       "image": "/assets/dalmation.png",
       "description": "Description dog 2",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 20
     },
     {
       "name": "Dog 3",
       "image": "/assets/chihuahua.avif",
       "description": "Description dog 3",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 21
+    },
+    {
+      "name": "Dog 4",
+      "image": "/assets/corgi.png",
+      "description": "Descritpion dog 4",
+      "isFavorite": false,
+      "id": 22
     }
   ]
 }
