@@ -53,9 +53,9 @@ export function FunctionalApp() {
     })
   }
 
-  const postDog = (dog: Omit<Dog, "id">) => {
+  const addDog = (dog: Omit<Dog, "id">) => {
     setIsloading(true);
-    Requests.postDog(dog).then(() => {
+    return Requests.postDog(dog).then(() => {
       refetchData()
       .then(() => {
         toast.success('Dog created succesfully.', {
@@ -82,7 +82,7 @@ export function FunctionalApp() {
         setActiveTab={setActiveTab}
       >
         {activeTab <= 2 && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}  deleteDog={deleteDog} isLoading={isLoading} updateDog={updateDog} />}
-        {activeTab === 3 && <FunctionalCreateDogForm postDog={postDog} isLoading={isLoading} />}
+        {activeTab === 3 && <FunctionalCreateDogForm addDog={addDog} isLoading={isLoading} />}
       </FunctionalSection>
     </div>
   );

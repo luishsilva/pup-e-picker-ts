@@ -41,6 +41,13 @@
       "description": "Descritpion dog 4",
       "isFavorite": false,
       "id": 22
+    },
+    {
+      "name": "Dog 1",
+      "image": "/assets/blue-heeler.png",
+      "description": "description dog 1",
+      "isFavorite": false,
+      "id": 23
     }
   ]
 }

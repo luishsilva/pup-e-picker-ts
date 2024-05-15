@@ -5,7 +5,7 @@ import { Dog } from "../types";
 //default selected image
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
-export const FunctionalCreateDogForm = ({postDog, isLoading} : {postDog: (dog: Omit<Dog, "id">) => void, isLoading: boolean}) => {
+export const FunctionalCreateDogForm = ({addDog, isLoading} : {addDog: (dog: Omit<Dog, "id">) => Promise<unknown>, isLoading: boolean}) => {
 
   const [name, setName] = useState("");
   const [image, setImage] = useState(defaultSelectedImage);
@@ -17,15 +17,16 @@ export const FunctionalCreateDogForm = ({postDog, isLoading} : {postDog: (dog: O
       id="create-dog-form"
       onSubmit={(e) => {
         e.preventDefault();
-        postDog({
+        addDog({
           name: name,
           image: image,
           description: description,
           isFavorite: false
+        }).then(() => {
+          setName("");
+          setDescription("");
+          setImage(defaultSelectedImage);
         });
-        setName("");
-        setDescription("");
-        setImage(defaultSelectedImage);
       }}
     >
       <h4>Create a New Dog</h4>
