@@ -131,7 +131,7 @@ You should use conditional rendering to show different components inside of the 
 - [ X ] `postDog` should take in a partial dog object, and return a promise that resolves to the dog object that was created
   - Note: Don't provide an id with the body of your request, the server will create an id for you
 - [ X ] `updateDog` should take in a partial dog object, and return a promise that resolves to the dog object that was modified
-- [ X ]  `delete` should take in a number, delete the dog with that id, and return a promise
+- [ X ] `delete` should take in a number, delete the dog with that id, and return a promise
 
 - We STRONGLY recommend you TEST these functions before you stress out about actually using them
 - For example, MAKE SURE `getAllDogs` works before trying to use it in your components to render things on the page

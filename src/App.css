@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "Rubik Bubbles";
+  font-family: 'Rubik Bubbles';
   src:
-    local("Rubik Bubbles"),
-    url("./fonts/RubikBubbles-Regular.ttf") format("truetype");
+    local('Rubik Bubbles'),
+    url('./fonts/RubikBubbles-Regular.ttf') format('truetype');
   font-weight: regular;
 }
 
@@ -56,7 +56,7 @@ body {
 #create-dog-form label {
   margin-top: 20px;
 }
-#create-dog-form input[type="submit"] {
+#create-dog-form input[type='submit'] {
   margin-top: 20px;
   color: white;
   border-radius: 2px;
@@ -320,7 +320,7 @@ body {
     system-ui,
     -apple-system,
     system-ui,
-    "Helvetica Neue",
+    'Helvetica Neue',
     Helvetica,
     Arial,
     sans-serif;

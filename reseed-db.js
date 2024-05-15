@@ -1,6 +1,6 @@
-import * as _ from "lodash-es";
-import { writeFileSync } from "fs";
-import { faker } from "@faker-js/faker";
+import * as _ from 'lodash-es';
+import { writeFileSync } from 'fs';
+import { faker } from '@faker-js/faker';
 
 const capitalize = _.capitalize;
 const range = _.range;
@@ -9,12 +9,12 @@ const sample = _.sample;
 const dogAmount = 20;
 
 const images = [
-  "/assets/blue-heeler.png",
-  "/assets/chihuahua.avif",
-  "/assets/boxer.png",
-  "/assets/corgi.png",
-  "/assets/cowardly.png",
-  "/assets/dalmation.png",
+  '/assets/blue-heeler.png',
+  '/assets/chihuahua.avif',
+  '/assets/boxer.png',
+  '/assets/corgi.png',
+  '/assets/cowardly.png',
+  '/assets/dalmation.png',
 ];
 
 const db = {
@@ -27,4 +27,4 @@ const db = {
   })),
 };
 
-writeFileSync("db.json", JSON.stringify(db), { encoding: "utf-8" });
+writeFileSync('db.json', JSON.stringify(db), { encoding: 'utf-8' });

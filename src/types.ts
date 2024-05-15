@@ -6,5 +6,4 @@ export type Dog = {
   id: number;
 };
 
-
 export type ActiveTab = 'all-dogs' | 'favorited' | 'unfavorited' | 'create-dog';

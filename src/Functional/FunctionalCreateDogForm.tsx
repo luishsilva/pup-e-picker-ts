@@ -1,61 +1,65 @@
-import { useState } from "react";
-import { dogPictures } from "../dog-pictures";
-import { Dog } from "../types";
+import { useState } from 'react';
+import { dogPictures } from '../dog-pictures';
+import { Dog } from '../types';
 
 //default selected image
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
-export const FunctionalCreateDogForm = ({addDog, isLoading} : {addDog: (dog: Omit<Dog, "id">) => Promise<unknown>, isLoading: boolean}) => {
-
-  const [name, setName] = useState("");
+export const FunctionalCreateDogForm = ({
+  addDog,
+  isLoading,
+}: {
+  addDog: (dog: Omit<Dog, 'id'>) => Promise<unknown>;
+  isLoading: boolean;
+}) => {
+  const [name, setName] = useState('');
   const [image, setImage] = useState(defaultSelectedImage);
-  const [description, setDescription] = useState("");
+  const [description, setDescription] = useState('');
 
   return (
     <form
       action=""
       id="create-dog-form"
-      onSubmit={(e) => {
+      onSubmit={e => {
         e.preventDefault();
         addDog({
           name: name,
           image: image,
           description: description,
-          isFavorite: false
+          isFavorite: false,
         }).then(() => {
-          setName("");
-          setDescription("");
+          setName('');
+          setDescription('');
           setImage(defaultSelectedImage);
         });
       }}
     >
       <h4>Create a New Dog</h4>
       <label htmlFor="name">Dog Name</label>
-      <input 
+      <input
         className="form-input"
-        disabled={false} 
-        onChange={(event) => setName(event.target.value)}
+        disabled={false}
+        onChange={event => setName(event.target.value)}
         type="text"
         value={name}
       />
       <label htmlFor="description">Dog Description</label>
-      <textarea 
+      <textarea
         className="form-input"
         cols={30}
         disabled={false}
-        onChange={(event) => setDescription(event.target.value)}
+        onChange={event => setDescription(event.target.value)}
         name=""
         rows={10}
         value={description}
-      >
-      </textarea>
+      ></textarea>
       <label htmlFor="picture">Select an Image</label>
       <div className="d-flex align-items">
         <div>
-          <select 
+          <select
             className="form-input"
-            onChange={(event) => {
-              setImage(event.target.value)
+            onChange={event => {
+              setImage(event.target.value);
             }}
             value={image}
           >
@@ -68,14 +72,14 @@ export const FunctionalCreateDogForm = ({addDog, isLoading} : {addDog: (dog: Omi
             })}
           </select>
         </div>
-        <img 
+        <img
           alt={`Image of ${image}`}
           className=""
           id="form-image-display"
           src={image}
         />
       </div>
-      <input type="submit" disabled={isLoading}/>
+      <input type="submit" disabled={isLoading} />
     </form>
   );
 };

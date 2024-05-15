@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
-import { FunctionalCreateDogForm } from "./FunctionalCreateDogForm";
-import { FunctionalDogs } from "./FunctionalDogs";
-import { FunctionalSection } from "./FunctionalSection";
-import { Requests } from "../api";
-import { ActiveTab,Dog } from "../types";
+import { useEffect, useState } from 'react';
+import { FunctionalCreateDogForm } from './FunctionalCreateDogForm';
+import { FunctionalDogs } from './FunctionalDogs';
+import { FunctionalSection } from './FunctionalSection';
+import { Requests } from '../api';
+import { ActiveTab, Dog } from '../types';
 import { toast } from 'react-hot-toast';
 
 export function FunctionalApp() {
-  
   const [activeTab, setActiveTab] = useState<ActiveTab>('all-dogs');
   const [allDogs, setAllDogs] = useState<Dog[]>([]);
   const [isLoading, setIsloading] = useState(false);
@@ -30,19 +29,18 @@ export function FunctionalApp() {
           });
         });
     });
-  }
+  };
 
   const deleteDog = (id: number) => {
     setIsloading(true);
     return new Promise<void>(() => {
       Requests.deleteDog(id)
         .then(() => {
-          refetchData()
-            .then(() => {
-              toast.success('Dog deleted succesfully.', {
-                duration: 2000,
-              });
+          refetchData().then(() => {
+            toast.success('Dog deleted succesfully.', {
+              duration: 2000,
             });
+          });
         })
         .finally(() => setIsloading(false))
         .catch(() => {
@@ -50,39 +48,49 @@ export function FunctionalApp() {
             duration: 2000,
           });
         });
-    })
-  }
+    });
+  };
 
-  const addDog = (dog: Omit<Dog, "id">) => {
+  const addDog = (dog: Omit<Dog, 'id'>) => {
     setIsloading(true);
     return Requests.postDog(dog).then(() => {
       refetchData()
-      .then(() => {
-        toast.success('Dog created successfully.', {
-          duration: 2000,
+        .then(() => {
+          toast.success('Dog created successfully.', {
+            duration: 2000,
+          });
+        })
+        .finally(() => setIsloading(false))
+        .catch(() => {
+          toast.error('Faield to add a new Dog, Please try again.', {
+            duration: 2000,
+          });
         });
-      })
-      .finally(() => setIsloading(false))
-      .catch(() => {
-        toast.error('Faield to add a new Dog, Please try again.', {
-          duration: 2000,
-        });
-      });
     });
-  }
+  };
 
   return (
-    <div className="App" style={{ backgroundColor: "skyblue" }}>
+    <div className="App" style={{ backgroundColor: 'skyblue' }}>
       <header>
         <h1>pup-e-picker (Functional)</h1>
       </header>
-      <FunctionalSection 
-        activeTab={activeTab} 
+      <FunctionalSection
+        activeTab={activeTab}
         allDogs={allDogs}
         setActiveTab={setActiveTab}
       >
-        {activeTab !== "create-dog" && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}  deleteDog={deleteDog} isLoading={isLoading} updateDog={updateDog} />}
-        {activeTab === "create-dog" && <FunctionalCreateDogForm addDog={addDog} isLoading={isLoading} />}
+        {activeTab !== 'create-dog' && (
+          <FunctionalDogs
+            activeTab={activeTab}
+            allDogs={allDogs}
+            deleteDog={deleteDog}
+            isLoading={isLoading}
+            updateDog={updateDog}
+          />
+        )}
+        {activeTab === 'create-dog' && (
+          <FunctionalCreateDogForm addDog={addDog} isLoading={isLoading} />
+        )}
       </FunctionalSection>
     </div>
   );

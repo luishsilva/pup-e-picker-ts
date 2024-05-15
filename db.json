@@ -62,6 +62,13 @@
       "description": "Dog three description",
       "isFavorite": false,
       "id": 25
+    },
+    {
+      "name": "Dog 5",
+      "image": "/assets/corgi.png",
+      "description": "Dog five description",
+      "isFavorite": false,
+      "id": 26
     }
   ]
 }

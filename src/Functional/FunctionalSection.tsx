@@ -24,7 +24,7 @@ export const FunctionalSection: React.FC<Props> = ({ children, activeTab, allDog
         </Link>
         <div className="selectors">
           <div 
-            className={`selector ${activeTab === 'all-dogs' && 'active'}`} 
+            className={`selector ${activeTab === 'all-dogs' && 'active'}`}
             onClick={() => {
               setActiveTab('all-dogs');
             }}

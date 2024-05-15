@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { dogPictures } from "./dog-pictures";
+import { Link } from 'react-router-dom';
+import { dogPictures } from './dog-pictures';
 
 export const Home = () => {
   return (
@@ -20,21 +20,21 @@ export const Home = () => {
       </h1>
       <div
         style={{
-          color: "black",
-          textAlign: "center",
+          color: 'black',
+          textAlign: 'center',
           padding: 10,
-          fontSize: 20
+          fontSize: 20,
         }}
       >
         <p>
-          Make an app to favorite some puppies! You'll need to treat both your{" "}
-          <i style={{ backgroundColor: "gray", color: "white", padding: 2 }}>
+          Make an app to favorite some puppies! You'll need to treat both your{' '}
+          <i style={{ backgroundColor: 'gray', color: 'white', padding: 2 }}>
             Functional App
-          </i>{" "}
-          and your{" "}
-          <i style={{ backgroundColor: "gray", color: "white", padding: 2 }}>
+          </i>{' '}
+          and your{' '}
+          <i style={{ backgroundColor: 'gray', color: 'white', padding: 2 }}>
             Class App
-          </i>{" "}
+          </i>{' '}
           as separate apps
         </p>
       </div>

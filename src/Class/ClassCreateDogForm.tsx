@@ -1,17 +1,17 @@
-import { Component } from "react";
-import { dogPictures } from "../dog-pictures";
-import { Dog } from "../types";
+import { Component } from 'react';
+import { dogPictures } from '../dog-pictures';
+import { Dog } from '../types';
 
 type State = {
-  image: string,
-  name: string,
-  description: string,
-}
+  image: string;
+  name: string;
+  description: string;
+};
 
 type CreateDogProps = {
-  postDog: (dog: Omit<Dog, "id">) => void,
-  isLoading: boolean,
-}
+  postDog: (dog: Omit<Dog, 'id'>) => void;
+  isLoading: boolean;
+};
 
 //default selected image
 const defaultSelectedImage = dogPictures.BlueHeeler;
@@ -19,13 +19,11 @@ const defaultSelectedImage = dogPictures.BlueHeeler;
 export class ClassCreateDogForm extends Component<CreateDogProps> {
   state: State = {
     image: defaultSelectedImage,
-    name: "",
-    description: ""
-    
-  }
+    name: '',
+    description: '',
+  };
 
   render() {
-    
     const { image, name, description } = this.state;
     const { isLoading, postDog } = this.props;
 
@@ -33,32 +31,32 @@ export class ClassCreateDogForm extends Component<CreateDogProps> {
       <form
         action="submit"
         id="create-dog-form"
-        onSubmit={(e) => {
+        onSubmit={e => {
           e.preventDefault();
           postDog({
             name: name,
             image: image,
             description: description,
-            isFavorite: false
+            isFavorite: false,
           });
           this.setState({
-            name: "",
-            description: "",
-            image: defaultSelectedImage
-          })
+            name: '',
+            description: '',
+            image: defaultSelectedImage,
+          });
         }}
       >
         <h4>Create a New Dog</h4>
         <label htmlFor="name">Dog Name</label>
-        <input 
+        <input
           className="form-input"
-          type="text" 
-          onChange={(e) => {
+          type="text"
+          onChange={e => {
             this.setState({
-              name: e.target.value
-            })
-          }} 
-          disabled={isLoading} 
+              name: e.target.value,
+            });
+          }}
+          disabled={isLoading}
           value={name}
         />
         <label htmlFor="description">Dog Description</label>
@@ -68,23 +66,23 @@ export class ClassCreateDogForm extends Component<CreateDogProps> {
           id=""
           cols={30}
           rows={10}
-          onChange={(e) => {
+          onChange={e => {
             this.setState({
-              description: e.target.value
-            })
-          }} 
+              description: e.target.value,
+            });
+          }}
           disabled={isLoading}
           value={description}
         />
         <label htmlFor="picture">Select an Image</label>
         <div className="d-flex align-items">
-          <select 
+          <select
             className="form-input"
-            onChange={(e) => {
+            onChange={e => {
               this.setState({
-                image: e.target.value
-              })
-            }} 
+                image: e.target.value,
+              });
+            }}
             disabled={isLoading}
             value={image}
           >
@@ -96,7 +94,7 @@ export class ClassCreateDogForm extends Component<CreateDogProps> {
               );
             })}
           </select>
-          <img 
+          <img
             alt={`Image of ${image}`}
             className=""
             id="form-image-display"
