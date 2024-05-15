@@ -4,15 +4,15 @@ import { Dog } from "../types";
 export const FunctionalDogs = ({activeTab, allDogs, updateDog, deleteDog, isLoading} : 
   {
     allDogs:Dog[]; 
-    activeTab: number; 
+    activeTab: string;
     updateDog: (id: number, isFavorite: boolean) => Promise<void>; 
     deleteDog: (id: number) => Promise<void>,
     isLoading: boolean
   }) => {
 
-  const filteredDogs = activeTab === 0 
+  const filteredDogs = activeTab === "all-dogs"
     ? allDogs
-    : allDogs.filter((dog) => activeTab == 1 ? dog.isFavorite : !dog.isFavorite);
+    : allDogs.filter((dog) => activeTab == "favorited" ? dog.isFavorite : !dog.isFavorite);
 
     return (
     <>
