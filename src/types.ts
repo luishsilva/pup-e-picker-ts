@@ -5,3 +5,6 @@ export type Dog = {
   isFavorite: boolean;
   id: number;
 };
+
+
+export type ActiveTab = 'all-dogs' | 'favorited' | 'unfavorited' | 'create-dog';
