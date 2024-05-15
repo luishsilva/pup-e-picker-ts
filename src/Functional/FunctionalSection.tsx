@@ -1,13 +1,13 @@
 // you can use this type for react children if you so choose
-import React, { ReactNode } from "react";
+import React, { ReactNode, Dispatch, SetStateAction } from "react";
 import { Link } from "react-router-dom";
-import { Dog } from "../types";
+import { ActiveTab, Dog } from "../types";
 
 type Props = {
   children: ReactNode,
-  activeTab: number,
+  activeTab: string,
   allDogs: Dog[],
-  setActiveTab: (tabIndex: number) => void
+  setActiveTab: Dispatch<SetStateAction<ActiveTab>>
 }
 
 export const FunctionalSection: React.FC<Props> = ({ children, activeTab, allDogs, setActiveTab })  => {
@@ -23,39 +23,36 @@ export const FunctionalSection: React.FC<Props> = ({ children, activeTab, allDog
           Change to Class
         </Link>
         <div className="selectors">
-          {/* This should display all dogs */}
           <div 
-            className={`selector ${activeTab === 0 && 'active'}`} 
+            className={`selector ${activeTab === 'all-dogs' && 'active'}`} 
             onClick={() => {
-              setActiveTab(0);
+              setActiveTab('all-dogs');
             }}
           >
             All Dogs ( { allDogs.length } )
           </div>
 
-          {/* This should display the favorited count */}
           <div 
-            className={`selector ${activeTab === 1 && 'active'}`} 
+            className={`selector ${activeTab === 'favorited' && 'active'}`} 
             onClick={() => {
-              setActiveTab(1);
+              setActiveTab('favorited');
             }}
           >
             favorited ( { favoritedDogs } )
           </div>
 
-          {/* This should display the unfavorited count */}
           <div 
-            className={`selector ${activeTab === 2 && 'active'}`} 
+            className={`selector ${activeTab ===  'unfavorited' && 'active'}`} 
             onClick={() => {
-              setActiveTab(2);
+              setActiveTab('unfavorited');
             }}
           >
             unfavorited ( { unfavoritedDogs } )
           </div>
           <div 
-            className={`selector ${activeTab === 3 && 'active'}`} 
+            className={`selector ${activeTab === 'create-dog' && 'active'}`} 
             onClick={() => {
-              setActiveTab(3);
+              setActiveTab('create-dog');
             }}
             >
             create dog

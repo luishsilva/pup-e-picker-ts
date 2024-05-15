@@ -48,6 +48,20 @@
       "description": "description dog 1",
       "isFavorite": false,
       "id": 23
+    },
+    {
+      "name": "Dog 2",
+      "image": "/assets/dalmation.png",
+      "description": "This is the dog number two",
+      "isFavorite": false,
+      "id": 24
+    },
+    {
+      "name": "Dog 3",
+      "image": "/assets/blue-heeler.png",
+      "description": "Dog three description",
+      "isFavorite": false,
+      "id": 25
     }
   ]
 }
