@@ -3,12 +3,12 @@ import { FunctionalCreateDogForm } from "./FunctionalCreateDogForm";
 import { FunctionalDogs } from "./FunctionalDogs";
 import { FunctionalSection } from "./FunctionalSection";
 import { Requests } from "../api";
-import { Dog } from "../types";
+import { ActiveTab,Dog } from "../types";
 import { toast } from 'react-hot-toast';
 
 export function FunctionalApp() {
   
-  const [activeTab, setActiveTab] = useState<number>(0);
+  const [activeTab, setActiveTab] = useState<ActiveTab>('all-dogs');
   const [allDogs, setAllDogs] = useState<Dog[]>([]);
   const [isLoading, setIsloading] = useState(false);
 
@@ -58,13 +58,13 @@ export function FunctionalApp() {
     return Requests.postDog(dog).then(() => {
       refetchData()
       .then(() => {
-        toast.success('Dog created succesfully.', {
+        toast.success('Dog created successfully.', {
           duration: 2000,
         });
       })
       .finally(() => setIsloading(false))
       .catch(() => {
-        toast.error('Faild to add a new Dog, Please try again.', {
+        toast.error('Faield to add a new Dog, Please try again.', {
           duration: 2000,
         });
       });
@@ -81,8 +81,8 @@ export function FunctionalApp() {
         allDogs={allDogs}
         setActiveTab={setActiveTab}
       >
-        {activeTab <= 2 && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}  deleteDog={deleteDog} isLoading={isLoading} updateDog={updateDog} />}
-        {activeTab === 3 && <FunctionalCreateDogForm addDog={addDog} isLoading={isLoading} />}
+        {activeTab !== "create-dog" && <FunctionalDogs activeTab={activeTab}  allDogs={allDogs}  deleteDog={deleteDog} isLoading={isLoading} updateDog={updateDog} />}
+        {activeTab === "create-dog" && <FunctionalCreateDogForm addDog={addDog} isLoading={isLoading} />}
       </FunctionalSection>
     </div>
   );
