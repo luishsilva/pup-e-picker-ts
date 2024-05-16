@@ -25,7 +25,7 @@ export const FunctionalCreateDogForm = ({
         addDog({
           name: name,
           image: image,
-          description: description,
+          description: description,  
           isFavorite: false,
         }).then(() => {
           setName('');
