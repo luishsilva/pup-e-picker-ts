@@ -28,23 +28,11 @@ export const Requests = {
     }).then(response => response.json()),
 
   // should delete a dog from the database
-  deleteDog: (id: number): Promise<void> => {
-    return new Promise((resolve, reject) => {
-      fetch(`${baseUrl}/${endPoint}/${id}`, {
+  deleteDog: (id: number): Promise<Dog[]> => 
+    fetch(`${baseUrl}/${endPoint}/${id}`, {
         method: 'DELETE',
-      })
-        .then(response => {
-          if (!response.ok) {
-            reject(new Error('Failed to delete dog'));
-          } else {
-            resolve();
-          }
-        })
-        .catch(error => {
-          reject(error);
-        });
-    });
-  },
+      }).then(response => response.json()
+    ),
 
   updateDog: (id: number, isFavorite: boolean): Promise<Dog[]> =>
     fetch(`${baseUrl}/${endPoint}/${id}`, {

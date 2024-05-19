@@ -15,13 +15,6 @@
       "id": 16
     },
     {
-      "name": "Dog 1",
-      "image": "/assets/boxer.jpeg",
-      "description": "DOG DESCRIPTION 1",
-      "isFavorite": true,
-      "id": 19
-    },
-    {
       "name": "Dog 2",
       "image": "/assets/dalmation.png",
       "description": "Description dog 2",

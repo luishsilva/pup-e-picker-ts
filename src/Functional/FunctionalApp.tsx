@@ -31,22 +31,16 @@ export function FunctionalApp() {
 
   const deleteDog = (id: number) => {
     setIsLoading(true);
-    return new Promise<void>(() => {
-      Requests.deleteDog(id)
-        .then(() => {
-          refetchData().then(() => {
-            toast.success('Dog deleted successfully.', {
-              duration: 2000,
-            });
-          });
-        })
-        .finally(() => setIsLoading(false))
-        .catch(() => {
-          toast.error('Failed to delete the Dog, Please try again.', {
-            duration: 2000,
-          });
+    return  Requests.deleteDog(id)
+    .then(() => refetchData())
+    .then(() => {
+      refetchData().then(() => {
+        toast.success('Dog deleted successfully.', {
+          duration: 2000,
         });
-    });
+      });
+    })
+    .finally(() => setIsLoading(false));
   };
 
   const addDog = (dog: Omit<Dog, 'id'>) => {

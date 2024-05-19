@@ -1,5 +1,6 @@
 import { DogCard } from '../Shared/DogCard';
 import { Dog } from '../types';
+import { toast } from 'react-hot-toast';
 
 export const FunctionalDogs = ({
   activeTab,
@@ -37,7 +38,13 @@ export const FunctionalDogs = ({
                 }}
                 key={dog.id}
                 onTrashIconClick={() => {
-                  deleteDog(dog.id);
+                  deleteDog(dog.id)
+                  .catch(() => {
+                    toast.error('Failed to delete the Dog, Please try again.', {
+                      duration: 2000,
+                    });
+                  })
+              ;
                 }}
                 onHeartClick={() => {
                   updateDog(dog.id, false);
