@@ -19,16 +19,14 @@ export function FunctionalApp() {
 
   const updateDog = (id: number, isFavorite: boolean) => {
     setIsLoading(true);
-    return new Promise<void>(() => {
-      Requests.updateDog(id, isFavorite)
-        .then(() => refetchData())
-        .finally(() => setIsLoading(false))
-        .catch(() => {
-          toast.error('Failed to update the Dog, Please try again.', {
-            duration: 2000,
-          });
+    return Requests.updateDog(id, isFavorite)
+      .then(() => refetchData())
+      .finally(() => setIsLoading(false))
+      .catch(() => {
+        toast.error('Failed to update the Dog, Please try again.', {
+          duration: 2000,
         });
-    });
+      });
   };
 
   const deleteDog = (id: number) => {
@@ -53,20 +51,14 @@ export function FunctionalApp() {
 
   const addDog = (dog: Omit<Dog, 'id'>) => {
     setIsLoading(true);
-    return Requests.postDog(dog).then(() => {
-      refetchData()
-        .then(() => {
-          toast.success('Dog created successfully.', {
-            duration: 2000,
-          });
-        })
-        .finally(() => setIsLoading(false))
-        .catch(() => {
-          toast.error('Failed to add a new Dog, Please try again.', {
-            duration: 2000,
-          });
-        });
-    });
+    return Requests.postDog(dog)
+    .then(() => refetchData())
+    .then(() => {
+      toast.success('Dog created successfully.', {
+        duration: 2000,
+      });
+    })
+    .finally(() => setIsLoading(false));
   };
 
   return (
