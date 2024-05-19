@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { dogPictures } from '../dog-pictures';
 import { Dog } from '../types';
+import { toast } from 'react-hot-toast';
 
 //default selected image
 const defaultSelectedImage = dogPictures.BlueHeeler;
@@ -31,7 +32,13 @@ export const FunctionalCreateDogForm = ({
           setName('');
           setDescription('');
           setImage(defaultSelectedImage);
-        });
+        })
+        .catch(() => {
+          toast.error('Failed to add a new Dog, Please try again.', {
+            duration: 2000,
+          });
+        })
+        ;
       }}
     >
       <h4>Create a New Dog</h4>
