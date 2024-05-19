@@ -47,10 +47,20 @@ export const FunctionalDogs = ({
               ;
                 }}
                 onHeartClick={() => {
-                  updateDog(dog.id, false);
+                  updateDog(dog.id, false)
+                  .catch(() => {
+                    toast.error('Failed to update the Dog, Please try again.', {
+                      duration: 2000,
+                    });
+                  });;
                 }}
                 onEmptyHeartClick={() => {
-                  updateDog(dog.id, true);
+                  updateDog(dog.id, true)
+                  .catch(() => {
+                    toast.error('Failed to update the Dog, Please try again.', {
+                      duration: 2000,
+                    });
+                  });;
                 }}
                 isLoading={isLoading}
               />

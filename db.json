@@ -11,21 +11,14 @@
       "name": "Mavis",
       "image": "/assets/dalmation.png",
       "description": "minus ripe cradle triumphantly as nor upside-down where",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 16
-    },
-    {
-      "name": "Dog 2",
-      "image": "/assets/dalmation.png",
-      "description": "Description dog 2",
-      "isFavorite": true,
-      "id": 20
     },
     {
       "name": "Dog 3",
       "image": "/assets/chihuahua.avif",
       "description": "Description dog 3",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 21
     },
     {
@@ -46,21 +39,21 @@
       "name": "Dog 2",
       "image": "/assets/dalmation.png",
       "description": "This is the dog number two",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 24
     },
     {
       "name": "Dog 3",
       "image": "/assets/blue-heeler.png",
       "description": "Dog three description",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 25
     },
     {
       "name": "Dog 5",
       "image": "/assets/corgi.png",
       "description": "Dog five description",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 26
     }
   ]

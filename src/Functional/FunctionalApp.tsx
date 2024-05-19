@@ -20,13 +20,8 @@ export function FunctionalApp() {
   const updateDog = (id: number, isFavorite: boolean) => {
     setIsLoading(true);
     return Requests.updateDog(id, isFavorite)
-      .then(() => refetchData())
-      .finally(() => setIsLoading(false))
-      .catch(() => {
-        toast.error('Failed to update the Dog, Please try again.', {
-          duration: 2000,
-        });
-      });
+    .then(() => refetchData())
+    .finally(() => setIsLoading(false))
   };
 
   const deleteDog = (id: number) => {

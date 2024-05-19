@@ -28,7 +28,7 @@ export const Requests = {
     }).then(response => response.json()),
 
   // should delete a dog from the database
-  deleteDog: (id: number): Promise<Dog[]> => 
+  deleteDog: (id: number): Promise<void> => 
     fetch(`${baseUrl}/${endPoint}/${id}`, {
         method: 'DELETE',
       }).then(response => response.json()
