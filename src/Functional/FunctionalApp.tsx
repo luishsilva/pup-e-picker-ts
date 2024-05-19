@@ -9,7 +9,7 @@ import { toast } from 'react-hot-toast';
 export function FunctionalApp() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('all-dogs');
   const [allDogs, setAllDogs] = useState<Dog[]>([]);
-  const [isLoading, setIsloading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     refetchData();
@@ -18,13 +18,13 @@ export function FunctionalApp() {
   const refetchData = () => Requests.getAllDogs().then(setAllDogs);
 
   const updateDog = (id: number, isFavorite: boolean) => {
-    setIsloading(true);
+    setIsLoading(true);
     return new Promise<void>(() => {
       Requests.updateDog(id, isFavorite)
         .then(() => refetchData())
-        .finally(() => setIsloading(false))
+        .finally(() => setIsLoading(false))
         .catch(() => {
-          toast.error('Faild to update the Dog, Please try again.', {
+          toast.error('Failed to update the Dog, Please try again.', {
             duration: 2000,
           });
         });
@@ -32,19 +32,19 @@ export function FunctionalApp() {
   };
 
   const deleteDog = (id: number) => {
-    setIsloading(true);
+    setIsLoading(true);
     return new Promise<void>(() => {
       Requests.deleteDog(id)
         .then(() => {
           refetchData().then(() => {
-            toast.success('Dog deleted succesfully.', {
+            toast.success('Dog deleted successfully.', {
               duration: 2000,
             });
           });
         })
-        .finally(() => setIsloading(false))
+        .finally(() => setIsLoading(false))
         .catch(() => {
-          toast.error('Faild to delete the Dog, Please try again.', {
+          toast.error('Failed to delete the Dog, Please try again.', {
             duration: 2000,
           });
         });
@@ -52,7 +52,7 @@ export function FunctionalApp() {
   };
 
   const addDog = (dog: Omit<Dog, 'id'>) => {
-    setIsloading(true);
+    setIsLoading(true);
     return Requests.postDog(dog).then(() => {
       refetchData()
         .then(() => {
@@ -60,9 +60,9 @@ export function FunctionalApp() {
             duration: 2000,
           });
         })
-        .finally(() => setIsloading(false))
+        .finally(() => setIsLoading(false))
         .catch(() => {
-          toast.error('Faield to add a new Dog, Please try again.', {
+          toast.error('Failed to add a new Dog, Please try again.', {
             duration: 2000,
           });
         });
