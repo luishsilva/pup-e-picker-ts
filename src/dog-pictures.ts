@@ -6,10 +6,10 @@ import Cowardly from '/assets/cowardly.png'
 import Dalmation from '/assets/dalmation.png'
 
 export const dogPictures = {
-    BlueHeeler,
-    Boxer,
-    Chihuahua,
-    Corgi,
-    Cowardly,
-    Dalmation,
+  BlueHeeler,
+  Boxer,
+  Chihuahua,
+  Corgi,
+  Cowardly,
+  Dalmation,
 }

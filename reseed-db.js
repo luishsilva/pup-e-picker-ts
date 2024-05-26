@@ -9,22 +9,22 @@ const sample = _.sample
 const dogAmount = 20
 
 const images = [
-    '/assets/blue-heeler.png',
-    '/assets/chihuahua.avif',
-    '/assets/boxer.png',
-    '/assets/corgi.png',
-    '/assets/cowardly.png',
-    '/assets/dalmation.png',
+  '/assets/blue-heeler.png',
+  '/assets/chihuahua.avif',
+  '/assets/boxer.png',
+  '/assets/corgi.png',
+  '/assets/cowardly.png',
+  '/assets/dalmation.png',
 ]
 
 const db = {
-    dogs: range(dogAmount).map((_, id) => ({
-        name: `${capitalize(faker.person.firstName())}`,
-        image: sample(images),
-        description: faker.word.words(sample([8, 5, 7])),
-        isFavorite: sample([true, false]),
-        id,
-    })),
+  dogs: range(dogAmount).map((_, id) => ({
+    name: `${capitalize(faker.person.firstName())}`,
+    image: sample(images),
+    description: faker.word.words(sample([8, 5, 7])),
+    isFavorite: sample([true, false]),
+    id,
+  })),
 }
 
 writeFileSync('db.json', JSON.stringify(db), { encoding: 'utf-8' })
