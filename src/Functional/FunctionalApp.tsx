@@ -22,6 +22,7 @@ export function FunctionalApp() {
     return Requests.updateDog(id, isFavorite)
       .then(() => refetchData())
       .catch(() => {
+        // setAllDogs([]); Setting all dogs to null as suggested will clean the allDogs state and then clear the page with no dogs listed this is the behavior desired?
         toast.error('Error updating dog.', {
           duration: 2000,
         })
