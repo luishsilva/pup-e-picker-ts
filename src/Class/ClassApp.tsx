@@ -36,9 +36,7 @@ export class ClassApp extends Component<
   updateDog = (id: number, isFavorite: boolean) => {
     this.setState({ isLoading: true })
     return Requests.updateDog(id, isFavorite)
-      .then(() => {
-        return this.refetchData()
-      })
+      .then(() => this.refetchData())
       .catch(() => {
         toast.error('Failed to update the Dog, Please try again.', {
           duration: 2000,
@@ -50,9 +48,7 @@ export class ClassApp extends Component<
   deleteDog = (id: number) => {
     this.setState({ isLoading: true })
     return Requests.deleteDog(id)
-      .then(() => {
-        return this.refetchData()
-      })
+      .then(() => this.refetchData())
       .catch(() => {
         toast.error('Failed to update the Dog, Please try again.', {
           duration: 2000,
@@ -69,9 +65,7 @@ export class ClassApp extends Component<
   postDog = (dog: Omit<Dog, 'id'>) => {
     this.setState({ isLoading: true })
     return Requests.postDog(dog)
-      .then(() => {
-        this.refetchData()
-      })
+      .then(() => this.refetchData())
       .catch(() => {
         toast.error('Failed to add a new Dog, Please try again.', {
           duration: 2000,
