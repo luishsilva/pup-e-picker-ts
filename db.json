@@ -18,7 +18,7 @@
       "name": "Dog 5",
       "image": "/assets/corgi.png",
       "description": "Dog five description",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 26
     },
     {

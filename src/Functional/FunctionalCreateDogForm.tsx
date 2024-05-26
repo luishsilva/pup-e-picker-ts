@@ -45,7 +45,7 @@ export const FunctionalCreateDogForm = ({
       <label htmlFor="name">Dog Name</label>
       <input
         className="form-input"
-        disabled={false}
+        disabled={isLoading}
         onChange={(event) => setName(event.target.value)}
         type="text"
         value={name}
@@ -54,7 +54,7 @@ export const FunctionalCreateDogForm = ({
       <textarea
         className="form-input"
         cols={30}
-        disabled={false}
+        disabled={isLoading}
         onChange={(event) => setDescription(event.target.value)}
         name=""
         rows={10}
@@ -65,6 +65,7 @@ export const FunctionalCreateDogForm = ({
         <div>
           <select
             className="form-input"
+            disabled={isLoading}
             onChange={(event) => {
               setImage(event.target.value)
             }}
