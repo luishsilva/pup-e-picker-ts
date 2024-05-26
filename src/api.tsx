@@ -5,7 +5,7 @@ export const endPoint = 'dogs'
 
 export const Requests = {
   /**
-   * Retrieves all dogss from the server.
+   * Retrieves all dogs from the server.
    * @returns {Promise<Dogs[]>} A promise that resolves to an array of dogs.
    */
   getAllDogs: (): Promise<Dog[]> =>
