@@ -2,15 +2,15 @@ import { DogCard } from '../Shared/DogCard'
 import { Component } from 'react'
 import { Dog } from '../types'
 
-type ClassDogsProps = {
-  allDogs: Dog[]
+type ClassDogsPropsType = {
   activeTab: number
+  allDogs: Dog[]
   deleteDog: (id: number) => Promise<void>
   isLoading: boolean
   updateDog: (id: number, isFavorite: boolean) => Promise<void>
 }
 
-export class ClassDogs extends Component<ClassDogsProps> {
+export class ClassDogs extends Component<ClassDogsPropsType> {
   render() {
     const { activeTab, allDogs, deleteDog, isLoading, updateDog } = this.props
 
