@@ -4,57 +4,36 @@
       "name": "Maxwell",
       "image": "/assets/boxer.png",
       "description": "before wherever which um carelessly",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 15
-    },
-    {
-      "name": "Mavis",
-      "image": "/assets/dalmation.png",
-      "description": "minus ripe cradle triumphantly as nor upside-down where",
-      "isFavorite": false,
-      "id": 16
-    },
-    {
-      "name": "Dog 3",
-      "image": "/assets/chihuahua.avif",
-      "description": "Description dog 3",
-      "isFavorite": false,
-      "id": 21
-    },
-    {
-      "name": "Dog 4",
-      "image": "/assets/corgi.png",
-      "description": "Descritpion dog 4",
-      "isFavorite": false,
-      "id": 22
-    },
-    {
-      "name": "Dog 1",
-      "image": "/assets/blue-heeler.png",
-      "description": "description dog 1",
-      "isFavorite": false,
-      "id": 23
-    },
-    {
-      "name": "Dog 2",
-      "image": "/assets/dalmation.png",
-      "description": "This is the dog number two",
-      "isFavorite": true,
-      "id": 24
     },
     {
       "name": "Dog 3",
       "image": "/assets/blue-heeler.png",
       "description": "Dog three description",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 25
     },
     {
       "name": "Dog 5",
       "image": "/assets/corgi.png",
       "description": "Dog five description",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 26
+    },
+    {
+      "name": "Luis",
+      "image": "/assets/blue-heeler.png",
+      "description": "asdasd",
+      "isFavorite": true,
+      "id": 27
+    },
+    {
+      "name": "sdasd",
+      "image": "/assets/blue-heeler.png",
+      "description": "adasd",
+      "isFavorite": true,
+      "id": 28
     }
   ]
 }
