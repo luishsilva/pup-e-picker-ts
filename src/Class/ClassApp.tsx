@@ -59,7 +59,7 @@ export class ClassApp extends Component<
           duration: 2000,
         })
       })
-      .finally(() => this.setState({ isLoading: true }))
+      .finally(() => this.setState({ isLoading: false }))
   }
 
   postDog = (dog: Omit<Dog, 'id'>) => {

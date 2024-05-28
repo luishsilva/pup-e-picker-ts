@@ -4,22 +4,15 @@
       "name": "Maxwell",
       "image": "/assets/boxer.png",
       "description": "before wherever which um carelessly",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 15
     },
     {
       "name": "Dog 3",
       "image": "/assets/blue-heeler.png",
       "description": "Dog three description",
-      "isFavorite": false,
-      "id": 25
-    },
-    {
-      "name": "Dog 5",
-      "image": "/assets/corgi.png",
-      "description": "Dog five description",
       "isFavorite": true,
-      "id": 26
+      "id": 25
     },
     {
       "name": "Luis",
